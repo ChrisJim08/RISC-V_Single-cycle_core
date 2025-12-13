@@ -115,7 +115,7 @@ module risc_v #(
     .mem_wr_en_o(mem_wr_en),
     .regf_rd_src_o(regf_rd_src),
 
-    .fnc7_h20_i(instr[30]),
+    .fnc7_h20_i(funct7_h20),
     .funct3_i(funct3),
     .alu_src_o(alu_src2_sel),
     .alu_op_o(alu_op)

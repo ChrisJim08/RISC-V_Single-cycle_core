@@ -1,6 +1,7 @@
 `ifndef RISC_V_SVH
 `define RISC_V_SVH
 
+localparam logic [6:0] R_TYPE      = 7'b0110011;
 localparam logic [6:0] I_IMM_TYPE  = 7'b0010011;
 localparam logic [6:0] I_OR_R_ALU  = 7'b0?10011;
 localparam logic [6:0] LD_TYPE     = 7'b0000011;

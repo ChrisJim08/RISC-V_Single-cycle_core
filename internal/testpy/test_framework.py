@@ -154,7 +154,7 @@ class SimWorker:
 
         if (errors):
             results.rars_sim_errs = errors
-            return results # Give up if mars simulation failed
+            return results # Give up if rars simulation failed
 
         results.rars_pass = True
         

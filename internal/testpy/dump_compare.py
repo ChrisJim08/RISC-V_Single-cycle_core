@@ -86,7 +86,7 @@ class StudentReader: ###########################################################
             line = line.strip()
 
             # New Cycle
-            if line == "1j":
+            if (line.startswith('#') and (int(line[-1]) % 2)):
                 self.cyc_num +=1
                 #print(f"[VerilatorReader] Clock Cyle: {self.cyc_num}")
                 continue
@@ -101,12 +101,12 @@ class StudentReader: ###########################################################
                     #print("[VerilatorReader] Register write disabled")
 
             # Register Write Address
-            elif self.in_reg_write and line.endswith(' >'):
+            elif line.endswith(' >'):
                 self.reg_write_addr = int(line.split()[0][1:], 2)
                 #print(f"[VerilatorReader] Register write address: 0x{self.reg_write_addr:02X}")
             
             # Register Write data
-            elif self.in_reg_write and line.endswith(' 2'):
+            elif line.endswith(' 2'):
                 self.reg_write_data = int(line.split()[0][1:], 2)
                 #print(f"[VerilatorReader] Register write data: 0x{self.reg_write_data:08X}")
 

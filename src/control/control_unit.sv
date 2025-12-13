@@ -36,6 +36,8 @@ module control_unit(
   output logic [3:0] alu_op_o
 );
 
+  logic fnc7_en       =    (op_code_i == R_TYPE);
+
   assign auipc_o      =    (op_code_i == AUIPC);
   assign branch_o     =    (op_code_i == B_TYPE);
   assign jal_o        =    (op_code_i == J_TYPE);
@@ -56,7 +58,7 @@ module control_unit(
         regf_rd_src_o = 2'b00;
         unique case (funct3_i)
           3'h0: begin
-            alu_op_o = fnc7_h20_i ? 4'h1 : 4'h0; //SUB //ADD
+            alu_op_o = (fnc7_h20_i && fnc7_en) ? 4'h1 : 4'h0; //SUB //ADD
           end
           3'h4: begin
             alu_op_o = 4'h2; //XOR 

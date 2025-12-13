@@ -19,8 +19,8 @@ void Vrisc_v___024root___eval_ico(Vrisc_v___024root* vlSelf) {
     }
 }
 
-extern const VlUnpacked<CData/*1:0*/, 2048> Vrisc_v__ConstPool__TABLE_h5257d03f_0;
-extern const VlUnpacked<CData/*3:0*/, 2048> Vrisc_v__ConstPool__TABLE_h93cde9b4_0;
+extern const VlUnpacked<CData/*1:0*/, 4096> Vrisc_v__ConstPool__TABLE_h6ee88576_0;
+extern const VlUnpacked<CData/*3:0*/, 4096> Vrisc_v__ConstPool__TABLE_ha71b62d5_0;
 
 VL_INLINE_OPT void Vrisc_v___024root___ico_sequent__TOP__0(Vrisc_v___024root* vlSelf) {
     (void)vlSelf;  // Prevent unused variable warning
@@ -28,7 +28,7 @@ VL_INLINE_OPT void Vrisc_v___024root___ico_sequent__TOP__0(Vrisc_v___024root* vl
     VL_DEBUG_IF(VL_DBG_MSGF("+    Vrisc_v___024root___ico_sequent__TOP__0\n"); );
     auto& vlSelfRef = std::ref(*vlSelf).get();
     // Init
-    SData/*10:0*/ __Vtableidx1;
+    SData/*11:0*/ __Vtableidx1;
     __Vtableidx1 = 0;
     // Body
     vlSelfRef.risc_v__DOT__imem_addr = (0x3ffU & ((IData)(vlSelfRef.imem_ld_i)
@@ -38,16 +38,15 @@ VL_INLINE_OPT void Vrisc_v___024root___ico_sequent__TOP__0(Vrisc_v___024root* vl
                                                    >> 2U)));
     vlSelfRef.risc_v__DOT__instr = vlSelfRef.risc_v__DOT__imem__DOT__mem
         [vlSelfRef.risc_v__DOT__imem_addr];
-    __Vtableidx1 = ((0x400U & (vlSelfRef.risc_v__DOT__imem__DOT__mem
-                               [vlSelfRef.risc_v__DOT__imem_addr] 
-                               >> 0x14U)) | ((0x380U 
-                                              & (vlSelfRef.risc_v__DOT__instr 
-                                                 >> 5U)) 
-                                             | (0x7fU 
-                                                & vlSelfRef.risc_v__DOT__instr)));
-    vlSelfRef.risc_v__DOT__regf_rd_src = Vrisc_v__ConstPool__TABLE_h5257d03f_0
+    __Vtableidx1 = (((0x33U == (0x7fU & vlSelfRef.risc_v__DOT__instr)) 
+                     << 0xbU) | ((0x400U & (vlSelfRef.risc_v__DOT__instr 
+                                            >> 0x14U)) 
+                                 | ((0x380U & (vlSelfRef.risc_v__DOT__instr 
+                                               >> 5U)) 
+                                    | (0x7fU & vlSelfRef.risc_v__DOT__instr))));
+    vlSelfRef.risc_v__DOT__regf_rd_src = Vrisc_v__ConstPool__TABLE_h6ee88576_0
         [__Vtableidx1];
-    vlSelfRef.risc_v__DOT__alu_op = Vrisc_v__ConstPool__TABLE_h93cde9b4_0
+    vlSelfRef.risc_v__DOT__alu_op = Vrisc_v__ConstPool__TABLE_ha71b62d5_0
         [__Vtableidx1];
     vlSelfRef.risc_v__DOT__imm = ((0x40U & vlSelfRef.risc_v__DOT__instr)
                                    ? ((0x20U & vlSelfRef.risc_v__DOT__instr)
@@ -425,7 +424,7 @@ VL_INLINE_OPT void Vrisc_v___024root___nba_sequent__TOP__0(Vrisc_v___024root* vl
     VL_DEBUG_IF(VL_DBG_MSGF("+    Vrisc_v___024root___nba_sequent__TOP__0\n"); );
     auto& vlSelfRef = std::ref(*vlSelf).get();
     // Init
-    SData/*10:0*/ __Vtableidx1;
+    SData/*11:0*/ __Vtableidx1;
     __Vtableidx1 = 0;
     IData/*31:0*/ __VdlyVal__risc_v__DOT__imem__DOT__mem__v0;
     __VdlyVal__risc_v__DOT__imem__DOT__mem__v0 = 0;
@@ -566,16 +565,15 @@ VL_INLINE_OPT void Vrisc_v___024root___nba_sequent__TOP__0(Vrisc_v___024root* vl
     }
     vlSelfRef.risc_v__DOT__instr = vlSelfRef.risc_v__DOT__imem__DOT__mem
         [vlSelfRef.risc_v__DOT__imem_addr];
-    __Vtableidx1 = ((0x400U & (vlSelfRef.risc_v__DOT__imem__DOT__mem
-                               [vlSelfRef.risc_v__DOT__imem_addr] 
-                               >> 0x14U)) | ((0x380U 
-                                              & (vlSelfRef.risc_v__DOT__instr 
-                                                 >> 5U)) 
-                                             | (0x7fU 
-                                                & vlSelfRef.risc_v__DOT__instr)));
-    vlSelfRef.risc_v__DOT__regf_rd_src = Vrisc_v__ConstPool__TABLE_h5257d03f_0
+    __Vtableidx1 = (((0x33U == (0x7fU & vlSelfRef.risc_v__DOT__instr)) 
+                     << 0xbU) | ((0x400U & (vlSelfRef.risc_v__DOT__instr 
+                                            >> 0x14U)) 
+                                 | ((0x380U & (vlSelfRef.risc_v__DOT__instr 
+                                               >> 5U)) 
+                                    | (0x7fU & vlSelfRef.risc_v__DOT__instr))));
+    vlSelfRef.risc_v__DOT__regf_rd_src = Vrisc_v__ConstPool__TABLE_h6ee88576_0
         [__Vtableidx1];
-    vlSelfRef.risc_v__DOT__alu_op = Vrisc_v__ConstPool__TABLE_h93cde9b4_0
+    vlSelfRef.risc_v__DOT__alu_op = Vrisc_v__ConstPool__TABLE_ha71b62d5_0
         [__Vtableidx1];
     vlSelfRef.risc_v__DOT__imm = ((0x40U & vlSelfRef.risc_v__DOT__instr)
                                    ? ((0x20U & vlSelfRef.risc_v__DOT__instr)

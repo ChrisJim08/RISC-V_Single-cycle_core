@@ -1,0 +1,164 @@
+[inst #1] addi x1,x0,0
+Register Write to Reg: 0x01 Val: 0x00000000
+[inst #2] sltiu x30,x1,0
+Register Write to Reg: 0x1E Val: 0x00000000
+[inst #3] addi x29,x0,0
+Register Write to Reg: 0x1D Val: 0x00000000
+[inst #4] addi x3,x0,2
+Register Write to Reg: 0x03 Val: 0x00000002
+[inst #5] bne x30,x29,332
+[inst #6] addi x1,x0,1
+Register Write to Reg: 0x01 Val: 0x00000001
+[inst #7] sltiu x30,x1,1
+Register Write to Reg: 0x1E Val: 0x00000000
+[inst #8] addi x29,x0,0
+Register Write to Reg: 0x1D Val: 0x00000000
+[inst #9] addi x3,x0,3
+Register Write to Reg: 0x03 Val: 0x00000003
+[inst #10] bne x30,x29,312
+[inst #11] addi x1,x0,3
+Register Write to Reg: 0x01 Val: 0x00000003
+[inst #12] sltiu x30,x1,7
+Register Write to Reg: 0x1E Val: 0x00000001
+[inst #13] addi x29,x0,1
+Register Write to Reg: 0x1D Val: 0x00000001
+[inst #14] addi x3,x0,4
+Register Write to Reg: 0x03 Val: 0x00000004
+[inst #15] bne x30,x29,292
+[inst #16] addi x1,x0,7
+Register Write to Reg: 0x01 Val: 0x00000007
+[inst #17] sltiu x30,x1,3
+Register Write to Reg: 0x1E Val: 0x00000000
+[inst #18] addi x29,x0,0
+Register Write to Reg: 0x1D Val: 0x00000000
+[inst #19] addi x3,x0,5
+Register Write to Reg: 0x03 Val: 0x00000005
+[inst #20] bne x30,x29,272
+[inst #21] addi x1,x0,0
+Register Write to Reg: 0x01 Val: 0x00000000
+[inst #22] sltiu x30,x1,-2048
+Register Write to Reg: 0x1E Val: 0x00000001
+[inst #23] addi x29,x0,1
+Register Write to Reg: 0x1D Val: 0x00000001
+[inst #24] addi x3,x0,6
+Register Write to Reg: 0x03 Val: 0x00000006
+[inst #25] bne x30,x29,252
+[inst #26] lui x1,-524288
+Register Write to Reg: 0x01 Val: 0xFFFFFFFF80000000
+[inst #27] addi x1,x1,0
+Register Write to Reg: 0x01 Val: 0xFFFFFFFF80000000
+[inst #28] sltiu x30,x1,0
+Register Write to Reg: 0x1E Val: 0x00000000
+[inst #29] addi x29,x0,0
+Register Write to Reg: 0x1D Val: 0x00000000
+[inst #30] addi x3,x0,7
+Register Write to Reg: 0x03 Val: 0x00000007
+[inst #31] bne x30,x29,228
+[inst #32] lui x1,-524288
+Register Write to Reg: 0x01 Val: 0xFFFFFFFF80000000
+[inst #33] addi x1,x1,0
+Register Write to Reg: 0x01 Val: 0xFFFFFFFF80000000
+[inst #34] sltiu x30,x1,-2048
+Register Write to Reg: 0x1E Val: 0x00000001
+[inst #35] addi x29,x0,1
+Register Write to Reg: 0x1D Val: 0x00000001
+[inst #36] addi x3,x0,8
+Register Write to Reg: 0x03 Val: 0x00000008
+[inst #37] bne x30,x29,204
+[inst #38] addi x1,x0,0
+Register Write to Reg: 0x01 Val: 0x00000000
+[inst #39] sltiu x30,x1,2047
+Register Write to Reg: 0x1E Val: 0x00000001
+[inst #40] addi x29,x0,1
+Register Write to Reg: 0x1D Val: 0x00000001
+[inst #41] addi x3,x0,9
+Register Write to Reg: 0x03 Val: 0x00000009
+[inst #42] bne x30,x29,184
+[inst #43] lui x1,524288
+Register Write to Reg: 0x01 Val: 0xFFFFFFFF80000000
+[inst #44] addi x1,x1,-1
+Register Write to Reg: 0x01 Val: 0x7FFFFFFF
+[inst #45] sltiu x30,x1,0
+Register Write to Reg: 0x1E Val: 0x00000000
+[inst #46] addi x29,x0,0
+Register Write to Reg: 0x1D Val: 0x00000000
+[inst #47] addi x3,x0,10
+Register Write to Reg: 0x03 Val: 0x0000000A
+[inst #48] bne x30,x29,160
+[inst #49] lui x1,524288
+Register Write to Reg: 0x01 Val: 0xFFFFFFFF80000000
+[inst #50] addi x1,x1,-1
+Register Write to Reg: 0x01 Val: 0x7FFFFFFF
+[inst #51] sltiu x30,x1,2047
+Register Write to Reg: 0x1E Val: 0x00000000
+[inst #52] addi x29,x0,0
+Register Write to Reg: 0x1D Val: 0x00000000
+[inst #53] addi x3,x0,11
+Register Write to Reg: 0x03 Val: 0x0000000B
+[inst #54] bne x30,x29,136
+[inst #55] lui x1,-524288
+Register Write to Reg: 0x01 Val: 0xFFFFFFFF80000000
+[inst #56] addi x1,x1,0
+Register Write to Reg: 0x01 Val: 0xFFFFFFFF80000000
+[inst #57] sltiu x30,x1,2047
+Register Write to Reg: 0x1E Val: 0x00000000
+[inst #58] addi x29,x0,0
+Register Write to Reg: 0x1D Val: 0x00000000
+[inst #59] addi x3,x0,12
+Register Write to Reg: 0x03 Val: 0x0000000C
+[inst #60] bne x30,x29,112
+[inst #61] lui x1,524288
+Register Write to Reg: 0x01 Val: 0xFFFFFFFF80000000
+[inst #62] addi x1,x1,-1
+Register Write to Reg: 0x01 Val: 0x7FFFFFFF
+[inst #63] sltiu x30,x1,-2048
+Register Write to Reg: 0x1E Val: 0x00000001
+[inst #64] addi x29,x0,1
+Register Write to Reg: 0x1D Val: 0x00000001
+[inst #65] addi x3,x0,13
+Register Write to Reg: 0x03 Val: 0x0000000D
+[inst #66] bne x30,x29,88
+[inst #67] addi x1,x0,0
+Register Write to Reg: 0x01 Val: 0x00000000
+[inst #68] sltiu x30,x1,-1
+Register Write to Reg: 0x1E Val: 0x00000001
+[inst #69] addi x29,x0,1
+Register Write to Reg: 0x1D Val: 0x00000001
+[inst #70] addi x3,x0,14
+Register Write to Reg: 0x03 Val: 0x0000000E
+[inst #71] bne x30,x29,68
+[inst #72] addi x1,x0,-1
+Register Write to Reg: 0x01 Val: 0xFFFFFFFFFFFFFFFF
+[inst #73] sltiu x30,x1,1
+Register Write to Reg: 0x1E Val: 0x00000000
+[inst #74] addi x29,x0,0
+Register Write to Reg: 0x1D Val: 0x00000000
+[inst #75] addi x3,x0,15
+Register Write to Reg: 0x03 Val: 0x0000000F
+[inst #76] bne x30,x29,48
+[inst #77] addi x1,x0,-1
+Register Write to Reg: 0x01 Val: 0xFFFFFFFFFFFFFFFF
+[inst #78] sltiu x30,x1,-1
+Register Write to Reg: 0x1E Val: 0x00000000
+[inst #79] addi x29,x0,0
+Register Write to Reg: 0x1D Val: 0x00000000
+[inst #80] addi x3,x0,16
+Register Write to Reg: 0x03 Val: 0x00000010
+[inst #81] bne x30,x29,28
+[inst #82] addi x1,x0,11
+Register Write to Reg: 0x01 Val: 0x0000000B
+[inst #83] sltiu x1,x1,13
+Register Write to Reg: 0x01 Val: 0x00000001
+[inst #84] addi x29,x0,1
+Register Write to Reg: 0x1D Val: 0x00000001
+[inst #85] addi x3,x0,17
+Register Write to Reg: 0x03 Val: 0x00000011
+[inst #86] bne x1,x29,8
+[inst #87] bne x0,x3,16
+[inst #88] addi x10,x0,42
+Register Write to Reg: 0x0A Val: 0x0000002A
+[inst #89] addi x17,x0,93
+Register Write to Reg: 0x11 Val: 0x0000005D
+[inst #90] ecall 
+
+Program terminated by calling exit

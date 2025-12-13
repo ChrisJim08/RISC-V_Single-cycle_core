@@ -142,9 +142,7 @@ void Vrisc_v___024root__trace_chg_0_sub_0(Vrisc_v___024root* vlSelf, VerilatedVc
                                           >> 0xfU))),5);
         bufp->chgCData(oldp+29,((0x1fU & (vlSelfRef.risc_v__DOT__instr 
                                           >> 0x14U))),5);
-        bufp->chgBit(oldp+30,((1U & (vlSelfRef.risc_v__DOT__imem__DOT__mem
-                                     [vlSelfRef.risc_v__DOT__imem_addr] 
-                                     >> 0x1eU))));
+        bufp->chgBit(oldp+30,((0x33U == (0x7fU & vlSelfRef.risc_v__DOT__instr))));
         bufp->chgIData(oldp+31,(vlSelfRef.risc_v__DOT__ctrl_flow_unit__DOT__base_addr),32);
         bufp->chgSData(oldp+32,((0x3ffU & (vlSelfRef.risc_v__DOT__alu_result 
                                            >> 2U))),10);
