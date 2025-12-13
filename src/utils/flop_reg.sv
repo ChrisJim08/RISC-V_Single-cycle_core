@@ -24,6 +24,7 @@ module flop_reg #(
 )(
   input  logic rst_i,
   input  logic clk_i,
+  input  logic halt_i,
   input  logic [DataWidth-1:0] d_i,
   output logic [DataWidth-1:0] q_o
 );
@@ -31,7 +32,7 @@ module flop_reg #(
 always_ff @(posedge clk_i) begin
   if (rst_i) begin 
     q_o <= '0;
-  end else begin
+  end else if (!halt_i) begin
     q_o <= d_i;
   end
 end

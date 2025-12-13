@@ -19,7 +19,7 @@ Vrisc_v__Syms::Vrisc_v__Syms(VerilatedContext* contextp, const char* namep, Vris
     , TOP{this, namep}
 {
         // Check resources
-        Verilated::stackCheck(79);
+        Verilated::stackCheck(67);
     // Configure time unit / time precision
     _vm_contextp__->timeunit(-9);
     _vm_contextp__->timeprecision(-12);

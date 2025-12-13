@@ -4,7 +4,6 @@
 #include "Vrisc_v___024root__DepSet_h9e48c939__0.cpp"
 #include "Vrisc_v___024root__DepSet_h1dd2243c__0.cpp"
 #include "Vrisc_v__Trace__0.cpp"
-#include "Vrisc_v__ConstPool_0.cpp"
 #include "Vrisc_v___024root__Slow.cpp"
 #include "Vrisc_v___024root__DepSet_h9e48c939__0__Slow.cpp"
 #include "Vrisc_v___024root__DepSet_h1dd2243c__0__Slow.cpp"

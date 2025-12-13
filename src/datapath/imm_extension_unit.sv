@@ -29,11 +29,11 @@ module imm_extension_unit (
 
   always_comb begin
     unique casez (op_code)
-      I_IMM_OR_LD: begin
+      IMM_LD_I_TYPE: begin
         imm_o = {{20{instr_i[31]}}, 
                   instr_i[31:20]};
       end
-      I_JMP_TYPE: begin
+      JMP_I_TYPE: begin
         imm_o = {{20{instr_i[31]}}, 
                  instr_i[31:20]};
       end
@@ -49,7 +49,7 @@ module imm_extension_unit (
                  instr_i[11:8], 
                  1'b0};
       end
-      J_TYPE: begin
+      JAL_J_TYPE: begin
         imm_o = {{12{instr_i[31]}}, 
                  instr_i[19:12], 
                  instr_i[20], 

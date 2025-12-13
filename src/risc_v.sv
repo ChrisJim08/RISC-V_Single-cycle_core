@@ -23,20 +23,20 @@ module risc_v #(
   parameter AddressWidth = 10,
   parameter DataWidth = 32
 )(
-  input logic clk_i,
-  input logic rst_i, 
-  input logic imem_ld_i, 
-  input logic [AddressWidth-1:0] imem_ld_addr_i, 
-  input logic [DataWidth-1:0] imem_ld_data_i
+  input logic  clk_i,
+  input logic  rst_i, 
+  input logic  imem_ld_i, 
+  input logic  [AddressWidth-1:0] imem_ld_addr_i, 
+  input logic  [DataWidth-1:0] imem_ld_data_i,
+  output logic halt_o  //Simulation signal
 );
-  //Simulation signals
-  logic halt;
 
   // Internal signals
   logic [3:0] alu_op;
-  logic [1:0] regf_rd_src;
+  logic [1:0] regf_wd_src;
   logic       alu_src2_sel;
-  logic       jal, jalr, branch, auipc;
+  logic       jal, jalr, branch;
+  logic       auipc, env_instr;
   logic       regf_wr_en, mem_wr_en;
 
   //Program Counter Wires
@@ -45,10 +45,12 @@ module risc_v #(
   logic [DataWidth-1:0] pc;
   logic [DataWidth-1:0] pc_plus4;
   logic [DataWidth-1:0] next_pc;
+
   //ALU Wires
   logic        alu_flag;
   logic [31:0] alu_src2;
   logic [31:0] alu_result;
+
   //Regfile Wires
   logic [31:0] regf_rd_data;
   logic [31:0] regf_rs1_data;
@@ -66,6 +68,8 @@ module risc_v #(
   
   assign alu_flag = alu_result[0];
 
+  assign halt_o = (env_instr); //Simulation signal
+
   // Instruction slicings
   logic [6:0] op_code       = instr[6:0];
   logic [2:0] funct3        = instr[14:12];
@@ -79,6 +83,7 @@ module risc_v #(
   ) pc_reg (
     .rst_i(rst_i),
     .clk_i(clk_i),
+    .halt_i(halt_o),
     .d_i(next_pc),
     .q_o(pc)
   );
@@ -107,18 +112,18 @@ module risc_v #(
   
   control_unit control_unit (
     .op_code_i(op_code),
+    .funct3_i(funct3),
+    .fnc7_h20_i(funct7_h20),
     .jal_o(jal),
     .jalr_o(jalr),
     .branch_o(branch),
     .auipc_o(auipc),
     .regf_wr_en_o(regf_wr_en),
     .mem_wr_en_o(mem_wr_en),
-    .regf_rd_src_o(regf_rd_src),
-
-    .fnc7_h20_i(funct7_h20),
-    .funct3_i(funct3),
+    .regf_wd_src_o(regf_wd_src),
     .alu_src_o(alu_src2_sel),
-    .alu_op_o(alu_op)
+    .alu_op_o(alu_op),
+    .env_instr_o(env_instr)
   );
   
   regfile regfile (
@@ -194,7 +199,7 @@ module risc_v #(
   );
 
   mux4 regf_wr_data_mux (
-    .sel_i(regf_rd_src), 
+    .sel_i(regf_wd_src), 
     .in0_i(alu_result), 
     .in1_i(ld_data),
     .in2_i(pc_plus4),

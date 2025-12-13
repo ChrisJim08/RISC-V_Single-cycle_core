@@ -13,6 +13,7 @@ Vrisc_v::Vrisc_v(VerilatedContext* _vcontextp__, const char* _vcname__)
     , clk_i{vlSymsp->TOP.clk_i}
     , rst_i{vlSymsp->TOP.rst_i}
     , imem_ld_i{vlSymsp->TOP.imem_ld_i}
+    , halt_o{vlSymsp->TOP.halt_o}
     , imem_ld_addr_i{vlSymsp->TOP.imem_ld_addr_i}
     , imem_ld_data_i{vlSymsp->TOP.imem_ld_data_i}
     , rootp{&(vlSymsp->TOP)}

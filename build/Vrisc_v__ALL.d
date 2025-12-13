@@ -10,7 +10,7 @@ Vrisc_v__ALL.o: Vrisc_v__ALL.cpp Vrisc_v.cpp Vrisc_v__pch.h \
  /opt/oss-cad-suite/share/verilator/include/verilated_trace.h \
  Vrisc_v___024root__DepSet_h9e48c939__0.cpp \
  Vrisc_v___024root__DepSet_h1dd2243c__0.cpp Vrisc_v__Trace__0.cpp \
- Vrisc_v__ConstPool_0.cpp Vrisc_v___024root__Slow.cpp \
+ Vrisc_v___024root__Slow.cpp \
  Vrisc_v___024root__DepSet_h9e48c939__0__Slow.cpp \
  Vrisc_v___024root__DepSet_h1dd2243c__0__Slow.cpp \
  Vrisc_v___024unit__Slow.cpp \

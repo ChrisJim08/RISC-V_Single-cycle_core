@@ -17,9 +17,10 @@ class alignas(VL_CACHE_LINE_BYTES) Vrisc_v___024root final : public VerilatedMod
     VL_IN8(clk_i,0,0);
     VL_IN8(rst_i,0,0);
     VL_IN8(imem_ld_i,0,0);
-    CData/*0:0*/ risc_v__DOT__halt;
+    VL_OUT8(halt_o,0,0);
     CData/*3:0*/ risc_v__DOT__alu_op;
-    CData/*1:0*/ risc_v__DOT__regf_rd_src;
+    CData/*1:0*/ risc_v__DOT__regf_wd_src;
+    CData/*0:0*/ risc_v__DOT__env_instr;
     CData/*7:0*/ risc_v__DOT__ld_data_ext__DOT__byte_sel;
     CData/*0:0*/ __VstlFirstIteration;
     CData/*0:0*/ __VicoFirstIteration;

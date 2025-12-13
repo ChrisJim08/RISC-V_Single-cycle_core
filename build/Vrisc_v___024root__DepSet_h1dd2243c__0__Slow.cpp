@@ -193,9 +193,10 @@ VL_ATTR_COLD void Vrisc_v___024root___ctor_var_reset(Vrisc_v___024root* vlSelf) 
     vlSelf->imem_ld_i = VL_RAND_RESET_I(1);
     vlSelf->imem_ld_addr_i = VL_RAND_RESET_I(10);
     vlSelf->imem_ld_data_i = VL_RAND_RESET_I(32);
-    vlSelf->risc_v__DOT__halt = VL_RAND_RESET_I(1);
+    vlSelf->halt_o = VL_RAND_RESET_I(1);
     vlSelf->risc_v__DOT__alu_op = VL_RAND_RESET_I(4);
-    vlSelf->risc_v__DOT__regf_rd_src = VL_RAND_RESET_I(2);
+    vlSelf->risc_v__DOT__regf_wd_src = VL_RAND_RESET_I(2);
+    vlSelf->risc_v__DOT__env_instr = VL_RAND_RESET_I(1);
     vlSelf->risc_v__DOT__target_pc = VL_RAND_RESET_I(32);
     vlSelf->risc_v__DOT__pc = VL_RAND_RESET_I(32);
     vlSelf->risc_v__DOT__next_pc = VL_RAND_RESET_I(32);

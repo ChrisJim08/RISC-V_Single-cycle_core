@@ -1,1 +1,4 @@
-asm/add.s
+asm/fadd.s
+asm/sll.s
+asm/sra.s
+asm/srl.s

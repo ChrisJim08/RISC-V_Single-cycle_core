@@ -59,7 +59,7 @@ int main(int argc, char **argv) {
 
 
     int issued_instructions = 3;
-    while (issued_instructions < (int)program.size() && !Verilated::gotFinish()) {
+    while ((issued_instructions < (int)program.size()) && !Verilated::gotFinish() && !top->halt_o) {
         // Rising edge
         top->clk_i = 1;
         top->eval();

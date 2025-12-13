@@ -19,17 +19,11 @@ void Vrisc_v___024root___eval_ico(Vrisc_v___024root* vlSelf) {
     }
 }
 
-extern const VlUnpacked<CData/*1:0*/, 4096> Vrisc_v__ConstPool__TABLE_h6ee88576_0;
-extern const VlUnpacked<CData/*3:0*/, 4096> Vrisc_v__ConstPool__TABLE_ha71b62d5_0;
-
 VL_INLINE_OPT void Vrisc_v___024root___ico_sequent__TOP__0(Vrisc_v___024root* vlSelf) {
     (void)vlSelf;  // Prevent unused variable warning
     Vrisc_v__Syms* const __restrict vlSymsp VL_ATTR_UNUSED = vlSelf->vlSymsp;
     VL_DEBUG_IF(VL_DBG_MSGF("+    Vrisc_v___024root___ico_sequent__TOP__0\n"); );
     auto& vlSelfRef = std::ref(*vlSelf).get();
-    // Init
-    SData/*11:0*/ __Vtableidx1;
-    __Vtableidx1 = 0;
     // Body
     vlSelfRef.risc_v__DOT__imem_addr = (0x3ffU & ((IData)(vlSelfRef.imem_ld_i)
                                                    ? (IData)(vlSelfRef.imem_ld_addr_i)
@@ -38,199 +32,297 @@ VL_INLINE_OPT void Vrisc_v___024root___ico_sequent__TOP__0(Vrisc_v___024root* vl
                                                    >> 2U)));
     vlSelfRef.risc_v__DOT__instr = vlSelfRef.risc_v__DOT__imem__DOT__mem
         [vlSelfRef.risc_v__DOT__imem_addr];
-    __Vtableidx1 = (((0x33U == (0x7fU & vlSelfRef.risc_v__DOT__instr)) 
-                     << 0xbU) | ((0x400U & (vlSelfRef.risc_v__DOT__instr 
-                                            >> 0x14U)) 
-                                 | ((0x380U & (vlSelfRef.risc_v__DOT__instr 
-                                               >> 5U)) 
-                                    | (0x7fU & vlSelfRef.risc_v__DOT__instr))));
-    vlSelfRef.risc_v__DOT__regf_rd_src = Vrisc_v__ConstPool__TABLE_h6ee88576_0
-        [__Vtableidx1];
-    vlSelfRef.risc_v__DOT__alu_op = Vrisc_v__ConstPool__TABLE_ha71b62d5_0
-        [__Vtableidx1];
-    vlSelfRef.risc_v__DOT__imm = ((0x40U & vlSelfRef.risc_v__DOT__instr)
-                                   ? ((0x20U & vlSelfRef.risc_v__DOT__instr)
-                                       ? ((0x10U & vlSelfRef.risc_v__DOT__instr)
-                                           ? 0U : (
-                                                   (8U 
+    vlSelfRef.risc_v__DOT__regf_wd_src = 0U;
+    vlSelfRef.risc_v__DOT__env_instr = 0U;
+    vlSelfRef.risc_v__DOT__alu_op = 0U;
+    if ((0x40U & vlSelfRef.risc_v__DOT__instr)) {
+        if ((0x20U & vlSelfRef.risc_v__DOT__instr)) {
+            if ((1U & (~ (vlSelfRef.risc_v__DOT__instr 
+                          >> 4U)))) {
+                if ((8U & vlSelfRef.risc_v__DOT__instr)) {
+                    if ((4U & vlSelfRef.risc_v__DOT__instr)) {
+                        if ((2U & vlSelfRef.risc_v__DOT__instr)) {
+                            if ((1U & vlSelfRef.risc_v__DOT__instr)) {
+                                vlSelfRef.risc_v__DOT__regf_wd_src = 2U;
+                            }
+                        }
+                    }
+                } else if ((4U & vlSelfRef.risc_v__DOT__instr)) {
+                    if ((2U & vlSelfRef.risc_v__DOT__instr)) {
+                        if ((1U & vlSelfRef.risc_v__DOT__instr)) {
+                            vlSelfRef.risc_v__DOT__regf_wd_src = 2U;
+                        }
+                    }
+                }
+                if ((1U & (~ (vlSelfRef.risc_v__DOT__instr 
+                              >> 3U)))) {
+                    if ((1U & (~ (vlSelfRef.risc_v__DOT__instr 
+                                  >> 2U)))) {
+                        if ((2U & vlSelfRef.risc_v__DOT__instr)) {
+                            if ((1U & vlSelfRef.risc_v__DOT__instr)) {
+                                if ((0x4000U & vlSelfRef.risc_v__DOT__instr)) {
+                                    vlSelfRef.risc_v__DOT__alu_op 
+                                        = ((0x2000U 
+                                            & vlSelfRef.risc_v__DOT__instr)
+                                            ? ((0x1000U 
+                                                & vlSelfRef.risc_v__DOT__instr)
+                                                ? 0xfU
+                                                : 0xeU)
+                                            : ((0x1000U 
+                                                & vlSelfRef.risc_v__DOT__instr)
+                                                ? 0xdU
+                                                : 0xcU));
+                                } else if ((1U & (~ 
+                                                  (vlSelfRef.risc_v__DOT__instr 
+                                                   >> 0xdU)))) {
+                                    vlSelfRef.risc_v__DOT__alu_op 
+                                        = ((0x1000U 
+                                            & vlSelfRef.risc_v__DOT__instr)
+                                            ? 0xbU : 0xaU);
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+            if ((0x10U & vlSelfRef.risc_v__DOT__instr)) {
+                if ((1U & (~ (vlSelfRef.risc_v__DOT__instr 
+                              >> 3U)))) {
+                    if ((1U & (~ (vlSelfRef.risc_v__DOT__instr 
+                                  >> 2U)))) {
+                        if ((2U & vlSelfRef.risc_v__DOT__instr)) {
+                            if ((1U & vlSelfRef.risc_v__DOT__instr)) {
+                                vlSelfRef.risc_v__DOT__env_instr = 1U;
+                            }
+                        }
+                    }
+                }
+                vlSelfRef.risc_v__DOT__imm = 0U;
+            } else {
+                vlSelfRef.risc_v__DOT__imm = ((8U & vlSelfRef.risc_v__DOT__instr)
+                                               ? ((4U 
+                                                   & vlSelfRef.risc_v__DOT__instr)
+                                                   ? 
+                                                  ((2U 
                                                     & vlSelfRef.risc_v__DOT__instr)
                                                     ? 
-                                                   ((4U 
+                                                   ((1U 
                                                      & vlSelfRef.risc_v__DOT__instr)
                                                      ? 
-                                                    ((2U 
-                                                      & vlSelfRef.risc_v__DOT__instr)
-                                                      ? 
-                                                     ((1U 
-                                                       & vlSelfRef.risc_v__DOT__instr)
-                                                       ? 
-                                                      (((- (IData)(
-                                                                   (vlSelfRef.risc_v__DOT__instr 
-                                                                    >> 0x1fU))) 
-                                                        << 0x14U) 
-                                                       | (((0xff000U 
-                                                            & vlSelfRef.risc_v__DOT__instr) 
-                                                           | (0x800U 
-                                                              & (vlSelfRef.risc_v__DOT__instr 
-                                                                 >> 9U))) 
-                                                          | (0x7feU 
-                                                             & (vlSelfRef.risc_v__DOT__instr 
-                                                                >> 0x14U))))
-                                                       : 0U)
-                                                      : 0U)
-                                                     : 0U)
-                                                    : 
-                                                   ((4U 
-                                                     & vlSelfRef.risc_v__DOT__instr)
-                                                     ? 
-                                                    ((2U 
-                                                      & vlSelfRef.risc_v__DOT__instr)
-                                                      ? 
-                                                     ((1U 
-                                                       & vlSelfRef.risc_v__DOT__instr)
-                                                       ? 
-                                                      (((- (IData)(
-                                                                   (vlSelfRef.risc_v__DOT__instr 
-                                                                    >> 0x1fU))) 
-                                                        << 0xcU) 
-                                                       | (vlSelfRef.risc_v__DOT__instr 
-                                                          >> 0x14U))
-                                                       : 0U)
-                                                      : 0U)
-                                                     : 
-                                                    ((2U 
-                                                      & vlSelfRef.risc_v__DOT__instr)
-                                                      ? 
-                                                     ((1U 
-                                                       & vlSelfRef.risc_v__DOT__instr)
-                                                       ? 
-                                                      (((- (IData)(
-                                                                   (vlSelfRef.risc_v__DOT__instr 
-                                                                    >> 0x1fU))) 
-                                                        << 0xcU) 
-                                                       | ((0x800U 
-                                                           & (vlSelfRef.risc_v__DOT__instr 
-                                                              << 4U)) 
-                                                          | ((0x7e0U 
-                                                              & (vlSelfRef.risc_v__DOT__instr 
-                                                                 >> 0x14U)) 
-                                                             | (0x1eU 
-                                                                & (vlSelfRef.risc_v__DOT__instr 
-                                                                   >> 7U)))))
-                                                       : 0U)
-                                                      : 0U))))
-                                       : 0U) : ((0x20U 
-                                                 & vlSelfRef.risc_v__DOT__instr)
-                                                 ? 
-                                                ((0x10U 
-                                                  & vlSelfRef.risc_v__DOT__instr)
-                                                  ? 
-                                                 ((8U 
-                                                   & vlSelfRef.risc_v__DOT__instr)
-                                                   ? 0U
-                                                   : 
-                                                  ((4U 
-                                                    & vlSelfRef.risc_v__DOT__instr)
-                                                    ? 
-                                                   ((2U 
-                                                     & vlSelfRef.risc_v__DOT__instr)
-                                                     ? 
-                                                    ((1U 
-                                                      & vlSelfRef.risc_v__DOT__instr)
-                                                      ? 
-                                                     (0xfffff000U 
-                                                      & vlSelfRef.risc_v__DOT__instr)
-                                                      : 0U)
-                                                     : 0U)
-                                                    : 0U))
-                                                  : 
-                                                 ((8U 
-                                                   & vlSelfRef.risc_v__DOT__instr)
-                                                   ? 0U
-                                                   : 
-                                                  ((4U 
-                                                    & vlSelfRef.risc_v__DOT__instr)
-                                                    ? 0U
-                                                    : 
-                                                   ((2U 
-                                                     & vlSelfRef.risc_v__DOT__instr)
-                                                     ? 
-                                                    ((1U 
-                                                      & vlSelfRef.risc_v__DOT__instr)
-                                                      ? 
-                                                     (((- (IData)(
-                                                                  (vlSelfRef.risc_v__DOT__instr 
-                                                                   >> 0x1fU))) 
-                                                       << 0xcU) 
-                                                      | ((0xfe0U 
-                                                          & (vlSelfRef.risc_v__DOT__instr 
-                                                             >> 0x14U)) 
-                                                         | (0x1fU 
+                                                    (((- (IData)(
+                                                                 (vlSelfRef.risc_v__DOT__instr 
+                                                                  >> 0x1fU))) 
+                                                      << 0x14U) 
+                                                     | (((0xff000U 
+                                                          & vlSelfRef.risc_v__DOT__instr) 
+                                                         | (0x800U 
                                                             & (vlSelfRef.risc_v__DOT__instr 
-                                                               >> 7U))))
-                                                      : 0U)
-                                                     : 0U))))
-                                                 : 
-                                                ((0x10U 
-                                                  & vlSelfRef.risc_v__DOT__instr)
-                                                  ? 
-                                                 ((8U 
+                                                               >> 9U))) 
+                                                        | (0x7feU 
+                                                           & (vlSelfRef.risc_v__DOT__instr 
+                                                              >> 0x14U))))
+                                                     : 0U)
+                                                    : 0U)
+                                                   : 0U)
+                                               : ((4U 
                                                    & vlSelfRef.risc_v__DOT__instr)
-                                                   ? 0U
-                                                   : 
-                                                  ((4U 
+                                                   ? 
+                                                  ((2U 
                                                     & vlSelfRef.risc_v__DOT__instr)
                                                     ? 
-                                                   ((2U 
+                                                   ((1U 
                                                      & vlSelfRef.risc_v__DOT__instr)
                                                      ? 
-                                                    ((1U 
-                                                      & vlSelfRef.risc_v__DOT__instr)
-                                                      ? 
-                                                     (0xfffff000U 
-                                                      & vlSelfRef.risc_v__DOT__instr)
-                                                      : 0U)
+                                                    (((- (IData)(
+                                                                 (vlSelfRef.risc_v__DOT__instr 
+                                                                  >> 0x1fU))) 
+                                                      << 0xcU) 
+                                                     | (vlSelfRef.risc_v__DOT__instr 
+                                                        >> 0x14U))
                                                      : 0U)
-                                                    : 
-                                                   ((2U 
+                                                    : 0U)
+                                                   : 
+                                                  ((2U 
+                                                    & vlSelfRef.risc_v__DOT__instr)
+                                                    ? 
+                                                   ((1U 
                                                      & vlSelfRef.risc_v__DOT__instr)
                                                      ? 
-                                                    ((1U 
-                                                      & vlSelfRef.risc_v__DOT__instr)
-                                                      ? 
-                                                     (((- (IData)(
-                                                                  (vlSelfRef.risc_v__DOT__instr 
-                                                                   >> 0x1fU))) 
-                                                       << 0xcU) 
-                                                      | (vlSelfRef.risc_v__DOT__instr 
-                                                         >> 0x14U))
-                                                      : 0U)
-                                                     : 0U)))
-                                                  : 
-                                                 ((8U 
+                                                    (((- (IData)(
+                                                                 (vlSelfRef.risc_v__DOT__instr 
+                                                                  >> 0x1fU))) 
+                                                      << 0xcU) 
+                                                     | ((0x800U 
+                                                         & (vlSelfRef.risc_v__DOT__instr 
+                                                            << 4U)) 
+                                                        | ((0x7e0U 
+                                                            & (vlSelfRef.risc_v__DOT__instr 
+                                                               >> 0x14U)) 
+                                                           | (0x1eU 
+                                                              & (vlSelfRef.risc_v__DOT__instr 
+                                                                 >> 7U)))))
+                                                     : 0U)
+                                                    : 0U)));
+            }
+        } else {
+            vlSelfRef.risc_v__DOT__imm = 0U;
+        }
+    } else {
+        if ((0x10U & vlSelfRef.risc_v__DOT__instr)) {
+            if ((1U & (~ (vlSelfRef.risc_v__DOT__instr 
+                          >> 3U)))) {
+                if ((4U & vlSelfRef.risc_v__DOT__instr)) {
+                    if ((2U & vlSelfRef.risc_v__DOT__instr)) {
+                        if ((1U & vlSelfRef.risc_v__DOT__instr)) {
+                            vlSelfRef.risc_v__DOT__regf_wd_src = 3U;
+                        }
+                    }
+                } else if ((2U & vlSelfRef.risc_v__DOT__instr)) {
+                    if ((1U & vlSelfRef.risc_v__DOT__instr)) {
+                        vlSelfRef.risc_v__DOT__regf_wd_src = 0U;
+                    }
+                }
+                if ((1U & (~ (vlSelfRef.risc_v__DOT__instr 
+                              >> 2U)))) {
+                    if ((2U & vlSelfRef.risc_v__DOT__instr)) {
+                        if ((1U & vlSelfRef.risc_v__DOT__instr)) {
+                            vlSelfRef.risc_v__DOT__alu_op 
+                                = ((0x4000U & vlSelfRef.risc_v__DOT__instr)
+                                    ? ((0x2000U & vlSelfRef.risc_v__DOT__instr)
+                                        ? ((0x1000U 
+                                            & vlSelfRef.risc_v__DOT__instr)
+                                            ? 4U : 3U)
+                                        : ((0x1000U 
+                                            & vlSelfRef.risc_v__DOT__instr)
+                                            ? ((0x40000000U 
+                                                & vlSelfRef.risc_v__DOT__instr)
+                                                ? 7U
+                                                : 6U)
+                                            : 2U)) : 
+                                   ((0x2000U & vlSelfRef.risc_v__DOT__instr)
+                                     ? ((0x1000U & vlSelfRef.risc_v__DOT__instr)
+                                         ? 9U : 8U)
+                                     : ((0x1000U & vlSelfRef.risc_v__DOT__instr)
+                                         ? 5U : ((IData)(
+                                                         (0x40000033U 
+                                                          == 
+                                                          (0x4000007fU 
+                                                           & vlSelfRef.risc_v__DOT__instr)))
+                                                  ? 1U
+                                                  : 0U))));
+                        }
+                    }
+                }
+            }
+        } else if ((1U & (~ (vlSelfRef.risc_v__DOT__instr 
+                             >> 3U)))) {
+            if ((1U & (~ (vlSelfRef.risc_v__DOT__instr 
+                          >> 2U)))) {
+                if ((2U & vlSelfRef.risc_v__DOT__instr)) {
+                    if ((1U & vlSelfRef.risc_v__DOT__instr)) {
+                        vlSelfRef.risc_v__DOT__regf_wd_src = 1U;
+                        vlSelfRef.risc_v__DOT__alu_op = 0U;
+                    }
+                }
+            }
+        }
+        vlSelfRef.risc_v__DOT__imm = ((0x20U & vlSelfRef.risc_v__DOT__instr)
+                                       ? ((0x10U & vlSelfRef.risc_v__DOT__instr)
+                                           ? ((8U & vlSelfRef.risc_v__DOT__instr)
+                                               ? 0U
+                                               : ((4U 
+                                                   & vlSelfRef.risc_v__DOT__instr)
+                                                   ? 
+                                                  ((2U 
+                                                    & vlSelfRef.risc_v__DOT__instr)
+                                                    ? 
+                                                   ((1U 
+                                                     & vlSelfRef.risc_v__DOT__instr)
+                                                     ? 
+                                                    (0xfffff000U 
+                                                     & vlSelfRef.risc_v__DOT__instr)
+                                                     : 0U)
+                                                    : 0U)
+                                                   : 0U))
+                                           : ((8U & vlSelfRef.risc_v__DOT__instr)
+                                               ? 0U
+                                               : ((4U 
                                                    & vlSelfRef.risc_v__DOT__instr)
                                                    ? 0U
                                                    : 
-                                                  ((4U 
+                                                  ((2U 
                                                     & vlSelfRef.risc_v__DOT__instr)
-                                                    ? 0U
-                                                    : 
-                                                   ((2U 
+                                                    ? 
+                                                   ((1U 
                                                      & vlSelfRef.risc_v__DOT__instr)
                                                      ? 
-                                                    ((1U 
-                                                      & vlSelfRef.risc_v__DOT__instr)
-                                                      ? 
-                                                     (((- (IData)(
-                                                                  (vlSelfRef.risc_v__DOT__instr 
-                                                                   >> 0x1fU))) 
-                                                       << 0xcU) 
-                                                      | (vlSelfRef.risc_v__DOT__instr 
-                                                         >> 0x14U))
-                                                      : 0U)
-                                                     : 0U))))));
+                                                    (((- (IData)(
+                                                                 (vlSelfRef.risc_v__DOT__instr 
+                                                                  >> 0x1fU))) 
+                                                      << 0xcU) 
+                                                     | ((0xfe0U 
+                                                         & (vlSelfRef.risc_v__DOT__instr 
+                                                            >> 0x14U)) 
+                                                        | (0x1fU 
+                                                           & (vlSelfRef.risc_v__DOT__instr 
+                                                              >> 7U))))
+                                                     : 0U)
+                                                    : 0U))))
+                                       : ((0x10U & vlSelfRef.risc_v__DOT__instr)
+                                           ? ((8U & vlSelfRef.risc_v__DOT__instr)
+                                               ? 0U
+                                               : ((4U 
+                                                   & vlSelfRef.risc_v__DOT__instr)
+                                                   ? 
+                                                  ((2U 
+                                                    & vlSelfRef.risc_v__DOT__instr)
+                                                    ? 
+                                                   ((1U 
+                                                     & vlSelfRef.risc_v__DOT__instr)
+                                                     ? 
+                                                    (0xfffff000U 
+                                                     & vlSelfRef.risc_v__DOT__instr)
+                                                     : 0U)
+                                                    : 0U)
+                                                   : 
+                                                  ((2U 
+                                                    & vlSelfRef.risc_v__DOT__instr)
+                                                    ? 
+                                                   ((1U 
+                                                     & vlSelfRef.risc_v__DOT__instr)
+                                                     ? 
+                                                    (((- (IData)(
+                                                                 (vlSelfRef.risc_v__DOT__instr 
+                                                                  >> 0x1fU))) 
+                                                      << 0xcU) 
+                                                     | (vlSelfRef.risc_v__DOT__instr 
+                                                        >> 0x14U))
+                                                     : 0U)
+                                                    : 0U)))
+                                           : ((8U & vlSelfRef.risc_v__DOT__instr)
+                                               ? 0U
+                                               : ((4U 
+                                                   & vlSelfRef.risc_v__DOT__instr)
+                                                   ? 0U
+                                                   : 
+                                                  ((2U 
+                                                    & vlSelfRef.risc_v__DOT__instr)
+                                                    ? 
+                                                   ((1U 
+                                                     & vlSelfRef.risc_v__DOT__instr)
+                                                     ? 
+                                                    (((- (IData)(
+                                                                 (vlSelfRef.risc_v__DOT__instr 
+                                                                  >> 0x1fU))) 
+                                                      << 0xcU) 
+                                                     | (vlSelfRef.risc_v__DOT__instr 
+                                                        >> 0x14U))
+                                                     : 0U)
+                                                    : 0U)))));
+    }
     vlSelfRef.risc_v__DOT__regf_rs1_data = vlSelfRef.risc_v__DOT__regfile__DOT__register_file
         [(0x1fU & (vlSelfRef.risc_v__DOT__instr >> 0xfU))];
+    vlSelfRef.halt_o = vlSelfRef.risc_v__DOT__env_instr;
     vlSelfRef.risc_v__DOT__alu_src2 = (((0x23U == (0x7fU 
                                                    & vlSelfRef.risc_v__DOT__instr)) 
                                         | ((3U == (0x7fU 
@@ -424,8 +516,6 @@ VL_INLINE_OPT void Vrisc_v___024root___nba_sequent__TOP__0(Vrisc_v___024root* vl
     VL_DEBUG_IF(VL_DBG_MSGF("+    Vrisc_v___024root___nba_sequent__TOP__0\n"); );
     auto& vlSelfRef = std::ref(*vlSelf).get();
     // Init
-    SData/*11:0*/ __Vtableidx1;
-    __Vtableidx1 = 0;
     IData/*31:0*/ __VdlyVal__risc_v__DOT__imem__DOT__mem__v0;
     __VdlyVal__risc_v__DOT__imem__DOT__mem__v0 = 0;
     SData/*9:0*/ __VdlyDim0__risc_v__DOT__imem__DOT__mem__v0;
@@ -457,17 +547,18 @@ VL_INLINE_OPT void Vrisc_v___024root___nba_sequent__TOP__0(Vrisc_v___024root* vl
         vlSelfRef.risc_v__DOT__pc = 0U;
     } else {
         if ((((0x23U != (0x7fU & vlSelfRef.risc_v__DOT__instr)) 
-              & (0x63U != (0x7fU & vlSelfRef.risc_v__DOT__instr))) 
+              & ((0x63U != (0x7fU & vlSelfRef.risc_v__DOT__instr)) 
+                 & (0x73U != (0x7fU & vlSelfRef.risc_v__DOT__instr)))) 
              & (0U != (0x1fU & (vlSelfRef.risc_v__DOT__instr 
                                 >> 7U))))) {
             __VdlyVal__risc_v__DOT__regfile__DOT__register_file__v31 
-                = ((2U & (IData)(vlSelfRef.risc_v__DOT__regf_rd_src))
-                    ? ((1U & (IData)(vlSelfRef.risc_v__DOT__regf_rd_src))
+                = ((2U & (IData)(vlSelfRef.risc_v__DOT__regf_wd_src))
+                    ? ((1U & (IData)(vlSelfRef.risc_v__DOT__regf_wd_src))
                         ? ((0x17U == (0x7fU & vlSelfRef.risc_v__DOT__instr))
                             ? vlSelfRef.risc_v__DOT__target_pc
                             : vlSelfRef.risc_v__DOT__imm)
                         : ((IData)(4U) + vlSelfRef.risc_v__DOT__pc))
-                    : ((1U & (IData)(vlSelfRef.risc_v__DOT__regf_rd_src))
+                    : ((1U & (IData)(vlSelfRef.risc_v__DOT__regf_wd_src))
                         ? ((0x4000U & vlSelfRef.risc_v__DOT__instr)
                             ? ((0x2000U & vlSelfRef.risc_v__DOT__instr)
                                 ? 0U : ((0x1000U & vlSelfRef.risc_v__DOT__instr)
@@ -493,9 +584,12 @@ VL_INLINE_OPT void Vrisc_v___024root___nba_sequent__TOP__0(Vrisc_v___024root* vl
                             >> 7U));
             __VdlySet__risc_v__DOT__regfile__DOT__register_file__v31 = 1U;
         }
-        vlSelfRef.risc_v__DOT__pc = vlSelfRef.risc_v__DOT__next_pc;
+        if ((1U & (~ (IData)(vlSelfRef.halt_o)))) {
+            vlSelfRef.risc_v__DOT__pc = vlSelfRef.risc_v__DOT__next_pc;
+        }
     }
-    if ((0x23U == (0x7fU & vlSelfRef.risc_v__DOT__instr))) {
+    if (((0x23U == (0x7fU & vlSelfRef.risc_v__DOT__instr)) 
+         & (0x73U != (0x7fU & vlSelfRef.risc_v__DOT__instr)))) {
         __VdlyVal__risc_v__DOT__dmem__DOT__mem__v0 
             = vlSelfRef.risc_v__DOT__regfile__DOT__register_file
             [(0x1fU & (vlSelfRef.risc_v__DOT__instr 
@@ -565,199 +659,297 @@ VL_INLINE_OPT void Vrisc_v___024root___nba_sequent__TOP__0(Vrisc_v___024root* vl
     }
     vlSelfRef.risc_v__DOT__instr = vlSelfRef.risc_v__DOT__imem__DOT__mem
         [vlSelfRef.risc_v__DOT__imem_addr];
-    __Vtableidx1 = (((0x33U == (0x7fU & vlSelfRef.risc_v__DOT__instr)) 
-                     << 0xbU) | ((0x400U & (vlSelfRef.risc_v__DOT__instr 
-                                            >> 0x14U)) 
-                                 | ((0x380U & (vlSelfRef.risc_v__DOT__instr 
-                                               >> 5U)) 
-                                    | (0x7fU & vlSelfRef.risc_v__DOT__instr))));
-    vlSelfRef.risc_v__DOT__regf_rd_src = Vrisc_v__ConstPool__TABLE_h6ee88576_0
-        [__Vtableidx1];
-    vlSelfRef.risc_v__DOT__alu_op = Vrisc_v__ConstPool__TABLE_ha71b62d5_0
-        [__Vtableidx1];
-    vlSelfRef.risc_v__DOT__imm = ((0x40U & vlSelfRef.risc_v__DOT__instr)
-                                   ? ((0x20U & vlSelfRef.risc_v__DOT__instr)
-                                       ? ((0x10U & vlSelfRef.risc_v__DOT__instr)
-                                           ? 0U : (
-                                                   (8U 
+    vlSelfRef.risc_v__DOT__regf_wd_src = 0U;
+    vlSelfRef.risc_v__DOT__env_instr = 0U;
+    vlSelfRef.risc_v__DOT__alu_op = 0U;
+    if ((0x40U & vlSelfRef.risc_v__DOT__instr)) {
+        if ((0x20U & vlSelfRef.risc_v__DOT__instr)) {
+            if ((1U & (~ (vlSelfRef.risc_v__DOT__instr 
+                          >> 4U)))) {
+                if ((8U & vlSelfRef.risc_v__DOT__instr)) {
+                    if ((4U & vlSelfRef.risc_v__DOT__instr)) {
+                        if ((2U & vlSelfRef.risc_v__DOT__instr)) {
+                            if ((1U & vlSelfRef.risc_v__DOT__instr)) {
+                                vlSelfRef.risc_v__DOT__regf_wd_src = 2U;
+                            }
+                        }
+                    }
+                } else if ((4U & vlSelfRef.risc_v__DOT__instr)) {
+                    if ((2U & vlSelfRef.risc_v__DOT__instr)) {
+                        if ((1U & vlSelfRef.risc_v__DOT__instr)) {
+                            vlSelfRef.risc_v__DOT__regf_wd_src = 2U;
+                        }
+                    }
+                }
+                if ((1U & (~ (vlSelfRef.risc_v__DOT__instr 
+                              >> 3U)))) {
+                    if ((1U & (~ (vlSelfRef.risc_v__DOT__instr 
+                                  >> 2U)))) {
+                        if ((2U & vlSelfRef.risc_v__DOT__instr)) {
+                            if ((1U & vlSelfRef.risc_v__DOT__instr)) {
+                                if ((0x4000U & vlSelfRef.risc_v__DOT__instr)) {
+                                    vlSelfRef.risc_v__DOT__alu_op 
+                                        = ((0x2000U 
+                                            & vlSelfRef.risc_v__DOT__instr)
+                                            ? ((0x1000U 
+                                                & vlSelfRef.risc_v__DOT__instr)
+                                                ? 0xfU
+                                                : 0xeU)
+                                            : ((0x1000U 
+                                                & vlSelfRef.risc_v__DOT__instr)
+                                                ? 0xdU
+                                                : 0xcU));
+                                } else if ((1U & (~ 
+                                                  (vlSelfRef.risc_v__DOT__instr 
+                                                   >> 0xdU)))) {
+                                    vlSelfRef.risc_v__DOT__alu_op 
+                                        = ((0x1000U 
+                                            & vlSelfRef.risc_v__DOT__instr)
+                                            ? 0xbU : 0xaU);
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+            if ((0x10U & vlSelfRef.risc_v__DOT__instr)) {
+                if ((1U & (~ (vlSelfRef.risc_v__DOT__instr 
+                              >> 3U)))) {
+                    if ((1U & (~ (vlSelfRef.risc_v__DOT__instr 
+                                  >> 2U)))) {
+                        if ((2U & vlSelfRef.risc_v__DOT__instr)) {
+                            if ((1U & vlSelfRef.risc_v__DOT__instr)) {
+                                vlSelfRef.risc_v__DOT__env_instr = 1U;
+                            }
+                        }
+                    }
+                }
+                vlSelfRef.risc_v__DOT__imm = 0U;
+            } else {
+                vlSelfRef.risc_v__DOT__imm = ((8U & vlSelfRef.risc_v__DOT__instr)
+                                               ? ((4U 
+                                                   & vlSelfRef.risc_v__DOT__instr)
+                                                   ? 
+                                                  ((2U 
                                                     & vlSelfRef.risc_v__DOT__instr)
                                                     ? 
-                                                   ((4U 
+                                                   ((1U 
                                                      & vlSelfRef.risc_v__DOT__instr)
                                                      ? 
-                                                    ((2U 
-                                                      & vlSelfRef.risc_v__DOT__instr)
-                                                      ? 
-                                                     ((1U 
-                                                       & vlSelfRef.risc_v__DOT__instr)
-                                                       ? 
-                                                      (((- (IData)(
-                                                                   (vlSelfRef.risc_v__DOT__instr 
-                                                                    >> 0x1fU))) 
-                                                        << 0x14U) 
-                                                       | (((0xff000U 
-                                                            & vlSelfRef.risc_v__DOT__instr) 
-                                                           | (0x800U 
-                                                              & (vlSelfRef.risc_v__DOT__instr 
-                                                                 >> 9U))) 
-                                                          | (0x7feU 
-                                                             & (vlSelfRef.risc_v__DOT__instr 
-                                                                >> 0x14U))))
-                                                       : 0U)
-                                                      : 0U)
-                                                     : 0U)
-                                                    : 
-                                                   ((4U 
-                                                     & vlSelfRef.risc_v__DOT__instr)
-                                                     ? 
-                                                    ((2U 
-                                                      & vlSelfRef.risc_v__DOT__instr)
-                                                      ? 
-                                                     ((1U 
-                                                       & vlSelfRef.risc_v__DOT__instr)
-                                                       ? 
-                                                      (((- (IData)(
-                                                                   (vlSelfRef.risc_v__DOT__instr 
-                                                                    >> 0x1fU))) 
-                                                        << 0xcU) 
-                                                       | (vlSelfRef.risc_v__DOT__instr 
-                                                          >> 0x14U))
-                                                       : 0U)
-                                                      : 0U)
-                                                     : 
-                                                    ((2U 
-                                                      & vlSelfRef.risc_v__DOT__instr)
-                                                      ? 
-                                                     ((1U 
-                                                       & vlSelfRef.risc_v__DOT__instr)
-                                                       ? 
-                                                      (((- (IData)(
-                                                                   (vlSelfRef.risc_v__DOT__instr 
-                                                                    >> 0x1fU))) 
-                                                        << 0xcU) 
-                                                       | ((0x800U 
-                                                           & (vlSelfRef.risc_v__DOT__instr 
-                                                              << 4U)) 
-                                                          | ((0x7e0U 
-                                                              & (vlSelfRef.risc_v__DOT__instr 
-                                                                 >> 0x14U)) 
-                                                             | (0x1eU 
-                                                                & (vlSelfRef.risc_v__DOT__instr 
-                                                                   >> 7U)))))
-                                                       : 0U)
-                                                      : 0U))))
-                                       : 0U) : ((0x20U 
-                                                 & vlSelfRef.risc_v__DOT__instr)
-                                                 ? 
-                                                ((0x10U 
-                                                  & vlSelfRef.risc_v__DOT__instr)
-                                                  ? 
-                                                 ((8U 
-                                                   & vlSelfRef.risc_v__DOT__instr)
-                                                   ? 0U
-                                                   : 
-                                                  ((4U 
-                                                    & vlSelfRef.risc_v__DOT__instr)
-                                                    ? 
-                                                   ((2U 
-                                                     & vlSelfRef.risc_v__DOT__instr)
-                                                     ? 
-                                                    ((1U 
-                                                      & vlSelfRef.risc_v__DOT__instr)
-                                                      ? 
-                                                     (0xfffff000U 
-                                                      & vlSelfRef.risc_v__DOT__instr)
-                                                      : 0U)
-                                                     : 0U)
-                                                    : 0U))
-                                                  : 
-                                                 ((8U 
-                                                   & vlSelfRef.risc_v__DOT__instr)
-                                                   ? 0U
-                                                   : 
-                                                  ((4U 
-                                                    & vlSelfRef.risc_v__DOT__instr)
-                                                    ? 0U
-                                                    : 
-                                                   ((2U 
-                                                     & vlSelfRef.risc_v__DOT__instr)
-                                                     ? 
-                                                    ((1U 
-                                                      & vlSelfRef.risc_v__DOT__instr)
-                                                      ? 
-                                                     (((- (IData)(
-                                                                  (vlSelfRef.risc_v__DOT__instr 
-                                                                   >> 0x1fU))) 
-                                                       << 0xcU) 
-                                                      | ((0xfe0U 
-                                                          & (vlSelfRef.risc_v__DOT__instr 
-                                                             >> 0x14U)) 
-                                                         | (0x1fU 
+                                                    (((- (IData)(
+                                                                 (vlSelfRef.risc_v__DOT__instr 
+                                                                  >> 0x1fU))) 
+                                                      << 0x14U) 
+                                                     | (((0xff000U 
+                                                          & vlSelfRef.risc_v__DOT__instr) 
+                                                         | (0x800U 
                                                             & (vlSelfRef.risc_v__DOT__instr 
-                                                               >> 7U))))
-                                                      : 0U)
-                                                     : 0U))))
-                                                 : 
-                                                ((0x10U 
-                                                  & vlSelfRef.risc_v__DOT__instr)
-                                                  ? 
-                                                 ((8U 
+                                                               >> 9U))) 
+                                                        | (0x7feU 
+                                                           & (vlSelfRef.risc_v__DOT__instr 
+                                                              >> 0x14U))))
+                                                     : 0U)
+                                                    : 0U)
+                                                   : 0U)
+                                               : ((4U 
                                                    & vlSelfRef.risc_v__DOT__instr)
-                                                   ? 0U
-                                                   : 
-                                                  ((4U 
+                                                   ? 
+                                                  ((2U 
                                                     & vlSelfRef.risc_v__DOT__instr)
                                                     ? 
-                                                   ((2U 
+                                                   ((1U 
                                                      & vlSelfRef.risc_v__DOT__instr)
                                                      ? 
-                                                    ((1U 
-                                                      & vlSelfRef.risc_v__DOT__instr)
-                                                      ? 
-                                                     (0xfffff000U 
-                                                      & vlSelfRef.risc_v__DOT__instr)
-                                                      : 0U)
+                                                    (((- (IData)(
+                                                                 (vlSelfRef.risc_v__DOT__instr 
+                                                                  >> 0x1fU))) 
+                                                      << 0xcU) 
+                                                     | (vlSelfRef.risc_v__DOT__instr 
+                                                        >> 0x14U))
                                                      : 0U)
-                                                    : 
-                                                   ((2U 
+                                                    : 0U)
+                                                   : 
+                                                  ((2U 
+                                                    & vlSelfRef.risc_v__DOT__instr)
+                                                    ? 
+                                                   ((1U 
                                                      & vlSelfRef.risc_v__DOT__instr)
                                                      ? 
-                                                    ((1U 
-                                                      & vlSelfRef.risc_v__DOT__instr)
-                                                      ? 
-                                                     (((- (IData)(
-                                                                  (vlSelfRef.risc_v__DOT__instr 
-                                                                   >> 0x1fU))) 
-                                                       << 0xcU) 
-                                                      | (vlSelfRef.risc_v__DOT__instr 
-                                                         >> 0x14U))
-                                                      : 0U)
-                                                     : 0U)))
-                                                  : 
-                                                 ((8U 
+                                                    (((- (IData)(
+                                                                 (vlSelfRef.risc_v__DOT__instr 
+                                                                  >> 0x1fU))) 
+                                                      << 0xcU) 
+                                                     | ((0x800U 
+                                                         & (vlSelfRef.risc_v__DOT__instr 
+                                                            << 4U)) 
+                                                        | ((0x7e0U 
+                                                            & (vlSelfRef.risc_v__DOT__instr 
+                                                               >> 0x14U)) 
+                                                           | (0x1eU 
+                                                              & (vlSelfRef.risc_v__DOT__instr 
+                                                                 >> 7U)))))
+                                                     : 0U)
+                                                    : 0U)));
+            }
+        } else {
+            vlSelfRef.risc_v__DOT__imm = 0U;
+        }
+    } else {
+        if ((0x10U & vlSelfRef.risc_v__DOT__instr)) {
+            if ((1U & (~ (vlSelfRef.risc_v__DOT__instr 
+                          >> 3U)))) {
+                if ((4U & vlSelfRef.risc_v__DOT__instr)) {
+                    if ((2U & vlSelfRef.risc_v__DOT__instr)) {
+                        if ((1U & vlSelfRef.risc_v__DOT__instr)) {
+                            vlSelfRef.risc_v__DOT__regf_wd_src = 3U;
+                        }
+                    }
+                } else if ((2U & vlSelfRef.risc_v__DOT__instr)) {
+                    if ((1U & vlSelfRef.risc_v__DOT__instr)) {
+                        vlSelfRef.risc_v__DOT__regf_wd_src = 0U;
+                    }
+                }
+                if ((1U & (~ (vlSelfRef.risc_v__DOT__instr 
+                              >> 2U)))) {
+                    if ((2U & vlSelfRef.risc_v__DOT__instr)) {
+                        if ((1U & vlSelfRef.risc_v__DOT__instr)) {
+                            vlSelfRef.risc_v__DOT__alu_op 
+                                = ((0x4000U & vlSelfRef.risc_v__DOT__instr)
+                                    ? ((0x2000U & vlSelfRef.risc_v__DOT__instr)
+                                        ? ((0x1000U 
+                                            & vlSelfRef.risc_v__DOT__instr)
+                                            ? 4U : 3U)
+                                        : ((0x1000U 
+                                            & vlSelfRef.risc_v__DOT__instr)
+                                            ? ((0x40000000U 
+                                                & vlSelfRef.risc_v__DOT__instr)
+                                                ? 7U
+                                                : 6U)
+                                            : 2U)) : 
+                                   ((0x2000U & vlSelfRef.risc_v__DOT__instr)
+                                     ? ((0x1000U & vlSelfRef.risc_v__DOT__instr)
+                                         ? 9U : 8U)
+                                     : ((0x1000U & vlSelfRef.risc_v__DOT__instr)
+                                         ? 5U : ((IData)(
+                                                         (0x40000033U 
+                                                          == 
+                                                          (0x4000007fU 
+                                                           & vlSelfRef.risc_v__DOT__instr)))
+                                                  ? 1U
+                                                  : 0U))));
+                        }
+                    }
+                }
+            }
+        } else if ((1U & (~ (vlSelfRef.risc_v__DOT__instr 
+                             >> 3U)))) {
+            if ((1U & (~ (vlSelfRef.risc_v__DOT__instr 
+                          >> 2U)))) {
+                if ((2U & vlSelfRef.risc_v__DOT__instr)) {
+                    if ((1U & vlSelfRef.risc_v__DOT__instr)) {
+                        vlSelfRef.risc_v__DOT__regf_wd_src = 1U;
+                        vlSelfRef.risc_v__DOT__alu_op = 0U;
+                    }
+                }
+            }
+        }
+        vlSelfRef.risc_v__DOT__imm = ((0x20U & vlSelfRef.risc_v__DOT__instr)
+                                       ? ((0x10U & vlSelfRef.risc_v__DOT__instr)
+                                           ? ((8U & vlSelfRef.risc_v__DOT__instr)
+                                               ? 0U
+                                               : ((4U 
+                                                   & vlSelfRef.risc_v__DOT__instr)
+                                                   ? 
+                                                  ((2U 
+                                                    & vlSelfRef.risc_v__DOT__instr)
+                                                    ? 
+                                                   ((1U 
+                                                     & vlSelfRef.risc_v__DOT__instr)
+                                                     ? 
+                                                    (0xfffff000U 
+                                                     & vlSelfRef.risc_v__DOT__instr)
+                                                     : 0U)
+                                                    : 0U)
+                                                   : 0U))
+                                           : ((8U & vlSelfRef.risc_v__DOT__instr)
+                                               ? 0U
+                                               : ((4U 
                                                    & vlSelfRef.risc_v__DOT__instr)
                                                    ? 0U
                                                    : 
-                                                  ((4U 
+                                                  ((2U 
                                                     & vlSelfRef.risc_v__DOT__instr)
-                                                    ? 0U
-                                                    : 
-                                                   ((2U 
+                                                    ? 
+                                                   ((1U 
                                                      & vlSelfRef.risc_v__DOT__instr)
                                                      ? 
-                                                    ((1U 
-                                                      & vlSelfRef.risc_v__DOT__instr)
-                                                      ? 
-                                                     (((- (IData)(
-                                                                  (vlSelfRef.risc_v__DOT__instr 
-                                                                   >> 0x1fU))) 
-                                                       << 0xcU) 
-                                                      | (vlSelfRef.risc_v__DOT__instr 
-                                                         >> 0x14U))
-                                                      : 0U)
-                                                     : 0U))))));
+                                                    (((- (IData)(
+                                                                 (vlSelfRef.risc_v__DOT__instr 
+                                                                  >> 0x1fU))) 
+                                                      << 0xcU) 
+                                                     | ((0xfe0U 
+                                                         & (vlSelfRef.risc_v__DOT__instr 
+                                                            >> 0x14U)) 
+                                                        | (0x1fU 
+                                                           & (vlSelfRef.risc_v__DOT__instr 
+                                                              >> 7U))))
+                                                     : 0U)
+                                                    : 0U))))
+                                       : ((0x10U & vlSelfRef.risc_v__DOT__instr)
+                                           ? ((8U & vlSelfRef.risc_v__DOT__instr)
+                                               ? 0U
+                                               : ((4U 
+                                                   & vlSelfRef.risc_v__DOT__instr)
+                                                   ? 
+                                                  ((2U 
+                                                    & vlSelfRef.risc_v__DOT__instr)
+                                                    ? 
+                                                   ((1U 
+                                                     & vlSelfRef.risc_v__DOT__instr)
+                                                     ? 
+                                                    (0xfffff000U 
+                                                     & vlSelfRef.risc_v__DOT__instr)
+                                                     : 0U)
+                                                    : 0U)
+                                                   : 
+                                                  ((2U 
+                                                    & vlSelfRef.risc_v__DOT__instr)
+                                                    ? 
+                                                   ((1U 
+                                                     & vlSelfRef.risc_v__DOT__instr)
+                                                     ? 
+                                                    (((- (IData)(
+                                                                 (vlSelfRef.risc_v__DOT__instr 
+                                                                  >> 0x1fU))) 
+                                                      << 0xcU) 
+                                                     | (vlSelfRef.risc_v__DOT__instr 
+                                                        >> 0x14U))
+                                                     : 0U)
+                                                    : 0U)))
+                                           : ((8U & vlSelfRef.risc_v__DOT__instr)
+                                               ? 0U
+                                               : ((4U 
+                                                   & vlSelfRef.risc_v__DOT__instr)
+                                                   ? 0U
+                                                   : 
+                                                  ((2U 
+                                                    & vlSelfRef.risc_v__DOT__instr)
+                                                    ? 
+                                                   ((1U 
+                                                     & vlSelfRef.risc_v__DOT__instr)
+                                                     ? 
+                                                    (((- (IData)(
+                                                                 (vlSelfRef.risc_v__DOT__instr 
+                                                                  >> 0x1fU))) 
+                                                      << 0xcU) 
+                                                     | (vlSelfRef.risc_v__DOT__instr 
+                                                        >> 0x14U))
+                                                     : 0U)
+                                                    : 0U)))));
+    }
     vlSelfRef.risc_v__DOT__regf_rs1_data = vlSelfRef.risc_v__DOT__regfile__DOT__register_file
         [(0x1fU & (vlSelfRef.risc_v__DOT__instr >> 0xfU))];
+    vlSelfRef.halt_o = vlSelfRef.risc_v__DOT__env_instr;
     vlSelfRef.risc_v__DOT__alu_src2 = (((0x23U == (0x7fU 
                                                    & vlSelfRef.risc_v__DOT__instr)) 
                                         | ((3U == (0x7fU 
