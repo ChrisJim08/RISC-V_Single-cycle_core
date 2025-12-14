@@ -35,9 +35,9 @@ always_comb begin
     4'h2: result_o = src1_i             ^   src2_i;
     4'h3: result_o = src1_i             |   src2_i;
     4'h4: result_o = src1_i             &   src2_i;
-    4'h5: result_o = src1_i             <<  src2_i;
-    4'h6: result_o = src1_i             >>  src2_i;
-    4'h7: result_o = $signed(src1_i)    >>> src2_i;
+    4'h5: result_o = src1_i             <<  src2_i[5:0];
+    4'h6: result_o = src1_i             >>  src2_i[5:0];
+    4'h7: result_o = $signed(src1_i)    >>> src2_i[5:0];
     4'h8: result_o = ($signed(src1_i)   <   $signed(src2_i))   ? 1 : 0;
     4'h9: result_o = ($unsigned(src1_i) <   $unsigned(src2_i)) ? 1 : 0;
     4'hA: result_o = (src1_i            ==  src2_i)            ? 1 : 0;

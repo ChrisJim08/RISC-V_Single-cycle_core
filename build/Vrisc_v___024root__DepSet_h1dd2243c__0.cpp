@@ -402,14 +402,20 @@ VL_INLINE_OPT void Vrisc_v___024root___ico_sequent__TOP__0(Vrisc_v___024root* vl
                                                  ((1U 
                                                    & (IData)(vlSelfRef.risc_v__DOT__alu_op))
                                                    ? 
-                                                  VL_SHIFTRS_III(32,32,32, vlSelfRef.risc_v__DOT__regf_rs1_data, vlSelfRef.risc_v__DOT__alu_src2)
+                                                  VL_SHIFTRS_III(32,32,6, vlSelfRef.risc_v__DOT__regf_rs1_data, 
+                                                                 (0x3fU 
+                                                                  & vlSelfRef.risc_v__DOT__alu_src2))
                                                    : 
-                                                  VL_SHIFTR_III(32,32,32, vlSelfRef.risc_v__DOT__regf_rs1_data, vlSelfRef.risc_v__DOT__alu_src2))
+                                                  VL_SHIFTR_III(32,32,6, vlSelfRef.risc_v__DOT__regf_rs1_data, 
+                                                                (0x3fU 
+                                                                 & vlSelfRef.risc_v__DOT__alu_src2)))
                                                   : 
                                                  ((1U 
                                                    & (IData)(vlSelfRef.risc_v__DOT__alu_op))
                                                    ? 
-                                                  VL_SHIFTL_III(32,32,32, vlSelfRef.risc_v__DOT__regf_rs1_data, vlSelfRef.risc_v__DOT__alu_src2)
+                                                  VL_SHIFTL_III(32,32,6, vlSelfRef.risc_v__DOT__regf_rs1_data, 
+                                                                (0x3fU 
+                                                                 & vlSelfRef.risc_v__DOT__alu_src2))
                                                    : 
                                                   (vlSelfRef.risc_v__DOT__regf_rs1_data 
                                                    & vlSelfRef.risc_v__DOT__alu_src2)))
@@ -1029,14 +1035,20 @@ VL_INLINE_OPT void Vrisc_v___024root___nba_sequent__TOP__0(Vrisc_v___024root* vl
                                                  ((1U 
                                                    & (IData)(vlSelfRef.risc_v__DOT__alu_op))
                                                    ? 
-                                                  VL_SHIFTRS_III(32,32,32, vlSelfRef.risc_v__DOT__regf_rs1_data, vlSelfRef.risc_v__DOT__alu_src2)
+                                                  VL_SHIFTRS_III(32,32,6, vlSelfRef.risc_v__DOT__regf_rs1_data, 
+                                                                 (0x3fU 
+                                                                  & vlSelfRef.risc_v__DOT__alu_src2))
                                                    : 
-                                                  VL_SHIFTR_III(32,32,32, vlSelfRef.risc_v__DOT__regf_rs1_data, vlSelfRef.risc_v__DOT__alu_src2))
+                                                  VL_SHIFTR_III(32,32,6, vlSelfRef.risc_v__DOT__regf_rs1_data, 
+                                                                (0x3fU 
+                                                                 & vlSelfRef.risc_v__DOT__alu_src2)))
                                                   : 
                                                  ((1U 
                                                    & (IData)(vlSelfRef.risc_v__DOT__alu_op))
                                                    ? 
-                                                  VL_SHIFTL_III(32,32,32, vlSelfRef.risc_v__DOT__regf_rs1_data, vlSelfRef.risc_v__DOT__alu_src2)
+                                                  VL_SHIFTL_III(32,32,6, vlSelfRef.risc_v__DOT__regf_rs1_data, 
+                                                                (0x3fU 
+                                                                 & vlSelfRef.risc_v__DOT__alu_src2))
                                                    : 
                                                   (vlSelfRef.risc_v__DOT__regf_rs1_data 
                                                    & vlSelfRef.risc_v__DOT__alu_src2)))
