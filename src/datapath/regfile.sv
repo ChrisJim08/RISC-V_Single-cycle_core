@@ -22,7 +22,7 @@
 module regfile #(
   parameter NumRegs      = 32,
   parameter DataWidth    = 32,
-  parameter AddressWidth = 5
+  localparam AddressWidth = $clog2(NumRegs)
 ) (
   input  logic                    clk_i,
   input  logic                    rst_i,
