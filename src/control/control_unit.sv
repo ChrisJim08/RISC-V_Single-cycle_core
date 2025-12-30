@@ -59,7 +59,7 @@ module control_unit(
 
   always_comb begin
     regf_wd_src_o = 2'b00;
-    alu_op_o = '0;
+    alu_op_o = 4'h0;
     env_instr_o = 1'b0;
     unique casez (op_code_i) 
       ALU_R_I_TYPE: begin
